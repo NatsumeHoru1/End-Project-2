@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nhat Ho Anh - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="theme-toggle">
+    <input type="checkbox" id="toggle">
+    <label for="toggle"><i class="fas fa-moon"></i><i class="fas fa-sun"></i></label>
+  </div>
+
+  <header class="hero">
+    <nav>
+      <div class="logo">Nhat.dev</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Nhat Ho Anh</span></h1>
+      <p class="tagline">Front-End Developer • Clean Code • Responsive Design</p>
+      <a href="#projects" class="btn-primary">View Projects</a>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I started with a modern free template (HTML5UP style) and completely customized it: changed colors, rebuilt the grid with 4 exact breakpoints, added dark mode, smooth scroll, working contact form, and hover animations. Everything is 100% valid and accessible!</p>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400/6366f1/ffffff?text=Color+Gallery" alt="Color Gallery">
+          <div class="card-body">
+            <h3>Color Gallery</h3>
+            <p>9-color responsive gallery • CSS Grid • 4 breakpoints</p>
+            <a href="#" class="btn-small">Live Demo →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400/10b981/ffffff?text=Restaurant" alt="Restaurant Site">
+          <div class="card-body">
+            <h3>Restaurant Landing</h3>
+            <p>Mobile-first • Flexbox • Form</p>
+            <a href="#" class="btn-small">Live Demo →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400/f59e0b/ffffff?text=Todo+App" alt="Todo App">
+          <div class="card-body">
+            <h3>Todo App</h3>
+            <p>Vanilla JS • Local Storage</p>
+            <a href="#" class="btn-small">Live Demo →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400/ef4444/ffffff?text=Final+Project" alt="Final Project">
+          <div class="card-body">
+            <h3>Final Project</h3>
+            <p>Responsive portfolio • This site!</p>
+            <a href="#" class="btn-small">Live Demo →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <form action="https://formspree.io/f/xanyourid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    document.getElementById('toggle').addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+    });
+
+    window.addEventListener('scroll', () => {
+      document.querySelector('.back-to-top').classList.toggle('show', window.scrollY > 400);
+    });
+  </script>
+</body>
+</html>
